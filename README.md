@@ -42,7 +42,12 @@ docker compose -f compose.yaml -p pr up -d
 ```
 Note: Spring will retry automatically connecting to Oracle during startup. First startups might fail while Oracle initializes.
 
-3. Access:
+3. Launch the UI:
+```bash
+java -jar TicketUi-1.0-SNAPSHOT-jar-with-dependencies.jar
+```
+
+4. Access:
 - API docs: http://localhost:8080/swagger-ui/
 - Database: http://localhost:1521
 
@@ -52,8 +57,9 @@ Note: Spring will retry automatically connecting to Oracle during startup. First
 ticket-management-system/
 ├── Tickets/           # Backend
 ├── TicketsUI/         # Frontend
-├── compose.yml
+├── docker-compose.yml
 └── schema.sql        # DB schema
+├── TicketUi-1.0-SNAPSHOT-jar-with-dependencies.jar  # Executable UI
 ```
 
 ## Development
